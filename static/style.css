@@ -229,3 +229,24 @@ footer {
     color: #2e7d32;
     font-weight: bold;
 }
+
+
+/* Responsive Grid Layout */
+@media (min-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .prediction-form {
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0;
+    width: 95%;
+  }}
