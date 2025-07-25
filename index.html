@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smart Crop Advisor</title>
+</head>
+<body>
+    <div class="landing">
+        <header>
+            <h1>SMART CROP ADVISOR</h1>
+            <p class="tagline">Get personalized crop recommendations based on your soil and climate conditions</p>
+        </header>
+
+        <main>
+            <form action="{{url_for('predict')}}" method="post" class="prediction-form">
+                <h2>Enter Your Agricultural Data</h2>
+                
+                <div class="form-group">
+                    <label for="nitrogen">Nitrogen Level (N)</label>
+                    <input type="number" step="0.01" id="nitrogen" name="Nitrogen" placeholder="e.g. 90" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phosphorus">Phosphorus Level (P)</label>
+                    <input type="number" step="0.01" id="phosphorus" name="Phosphorus" placeholder="e.g. 42" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="potassium">Potassium Level (K)</label>
+                    <input type="number" step="0.01" id="potassium" name="Potassium" placeholder="e.g. 43" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="temperature">Temperature (°C)</label>
+                    <input type="number" step="0.01" id="temperature" name="Temperature" placeholder="e.g. 20.87" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="humidity">Humidity (%)</label>
+                    <input type="number" step="0.01" id="humidity" name="Humidity" placeholder="e.g. 82.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ph">Soil pH Level</label>
+                    <input type="number" step="0.01" id="ph" name="ph" placeholder="e.g. 6.50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rainfall">Rainfall (mm)</label>
+                    <input type="number" step="0.01" id="rainfall" name="Rainfall" placeholder="e.g. 202.93" required>
+                </div>
+
+                <button type="submit" class="predict-btn">Get Crop Recommendation</button>
+            </form>
+
+            <div class="info-section">
+                <h3>How It Works</h3>
+                <p>Our AI model analyzes your soil nutrients and weather conditions to suggest the most suitable crops for maximum yield.</p>
+                
+                <h3>Ideal Conditions For:</h3>
+                <ul>
+                    <li><strong>Rice:</strong> High nitrogen, moderate phosphorus, high humidity</li>
+                    <li><strong>Wheat:</strong> Balanced nutrients, cooler temperatures</li>
+                    <li><strong>Cotton:</strong> Warm temperatures, moderate rainfall</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2023 Smart Crop Advisor | For Agricultural Decision Support</p>
+        </footer>
+    </div>
+</body>
+</html>
