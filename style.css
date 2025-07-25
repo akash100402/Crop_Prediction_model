@@ -1,8 +1,174 @@
+/* Base Styles */
+:root {
+  --primary-yellow: #f7d56a;
+  --dark-yellow: #e6b422;
+  --light-yellow: #fff3c9;
+  --dark-green: #3a5a40;
+  --light-green: #a3b18a;
+  --white: #ffffff;
+  --black: #333333;
+}
+
 body {
-  background: url("bg-landing.jpg") center/cover no-repeat fixed;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: fixed;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+      rgba(247, 213, 106, 0.85), 
+      rgba(230, 180, 34, 0.9)
+    ), 
+    url('bg-landing.jpg') center/cover no-repeat fixed;
+  color: var(--black);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Layout */
+.landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Typography */
+h1 {
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--dark-yellow);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--dark-green);
+  font-size: 1.4rem;
+}
+
+.tagline {
+  color: var(--dark-green);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Form Styles */
+.prediction-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--light-yellow);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--dark-yellow);
+  box-shadow: 0 0 0 3px rgba(230, 180, 34, 0.3);
+}
+
+.predict-btn {
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.predict-btn:hover {
+  background-color: #2d4739;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Section */
+.info-section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-section p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.info-section ul {
+  padding-left: 1.5rem;
+}
+
+.info-section li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.info-section strong {
+  color: var(--dark-green);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--dark-green);
 }
