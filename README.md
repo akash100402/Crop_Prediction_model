@@ -55,3 +55,6 @@ Open a Pull Request
 📧 Contact
 E-mail - aakash10aj@gmail.com
 Portfolio Link: https://akashs-portfolio.onrender.com
+
+### Run locally
+terminal - python app.py
